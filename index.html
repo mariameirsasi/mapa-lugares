@@ -31,96 +31,99 @@
 
   /* topbar */
   .topbar {
-    display: flex; align-items: center; gap: 28px;
-    padding: 14px 22px; background: #fff; border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; gap: 20px;
+    padding: 12px 20px; background: #fff; border-bottom: 1px solid var(--line);
     flex: 0 0 auto; flex-wrap: wrap;
   }
-  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand { display: flex; align-items: center; gap: 10px; }
   .brand-mark {
-    width: 30px; height: 30px; border-radius: 8px; flex: 0 0 auto;
-    background: var(--yellow);
-    box-shadow: inset 0 0 0 4px rgba(0,0,0,.08);
+    width: 28px; height: 28px; border-radius: 7px; flex: 0 0 auto;
+    background: var(--yellow); box-shadow: inset 0 0 0 4px rgba(0,0,0,.08);
   }
-  .brand h1 { font-size: 18px; margin: 0; font-weight: 800; letter-spacing: -.02em; }
-  .brand p { margin: 1px 0 0; font-size: 12px; color: var(--muted); font-weight: 500; }
-  .stats { display: flex; gap: 10px; margin-left: auto; flex-wrap: wrap; }
+  .brand h1 { font-size: 17px; margin: 0; font-weight: 800; letter-spacing: -.02em; }
+  .brand p { margin: 1px 0 0; font-size: 11.5px; color: var(--muted); font-weight: 500; }
+  .stats { display: flex; gap: 8px; margin-left: auto; flex-wrap: wrap; }
   .stat {
     background: #f4f6f8; border: 1px solid var(--line); border-radius: 10px;
-    padding: 6px 14px; min-width: 72px; text-align: center;
+    padding: 5px 12px; min-width: 68px; text-align: center;
   }
-  .stat b { display: block; font-size: 19px; font-weight: 800; line-height: 1; }
-  .stat span { font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; font-weight: 600; }
+  .stat b { display: block; font-size: 18px; font-weight: 800; line-height: 1; }
+  .stat span { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; font-weight: 600; }
   .top-actions { display: flex; gap: 8px; }
 
   .btn {
     font-family: inherit; font-weight: 600; font-size: 13px; cursor: pointer;
-    border-radius: 9px; padding: 9px 14px; border: 1px solid var(--line); background: #fff; color: var(--ink);
-    transition: .15s; white-space: nowrap;
+    border-radius: 9px; padding: 8px 14px; border: 1px solid var(--line); background: #fff; color: var(--ink);
+    transition: .15s; white-space: nowrap; -webkit-tap-highlight-color: transparent;
   }
   .btn:hover { background: #f4f6f8; }
   .btn.ghost { color: var(--muted); }
-  .btn.primary { background: var(--ink); color: #fff; border-color: var(--ink); width: 100%; padding: 11px; font-size: 13.5px; }
+  .btn.primary {
+    background: var(--ink); color: #fff; border-color: var(--ink);
+    width: 100%; padding: 11px; font-size: 13.5px;
+  }
   .btn.primary:hover { background: #000; }
 
   /* body layout */
   .body { flex: 1 1 auto; display: flex; min-height: 0; }
   .sidebar {
-    flex: 0 0 320px; width: 320px; background: var(--bg);
-    border-right: 1px solid var(--line); padding: 16px; overflow-y: auto;
-    display: flex; flex-direction: column; gap: 14px;
+    flex: 0 0 300px; width: 300px; background: var(--bg);
+    border-right: 1px solid var(--line); padding: 14px; overflow-y: auto;
+    display: flex; flex-direction: column; gap: 12px;
   }
-  .card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 16px; box-shadow: var(--shadow); }
-  .card h2 { font-size: 13px; margin: 0 0 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 14px; box-shadow: var(--shadow); }
+  .card h2 { font-size: 12px; margin: 0 0 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
 
-  .reg-form { display: flex; flex-direction: column; gap: 10px; }
+  .reg-form { display: flex; flex-direction: column; gap: 9px; }
   .input {
-    font-family: inherit; font-size: 14px; padding: 11px 12px; border-radius: 10px;
+    font-family: inherit; font-size: 14px; padding: 10px 12px; border-radius: 10px;
     border: 1px solid var(--line); background: #fff; width: 100%; color: var(--ink);
   }
   .input:focus { outline: none; border-color: var(--yellow); box-shadow: 0 0 0 3px rgba(242,177,0,.18); }
-  .sector-pick { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+  .sector-pick { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
   .sector-chip {
-    font-family: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer;
+    font-family: inherit; font-size: 12px; font-weight: 600; cursor: pointer;
     padding: 8px 6px; border-radius: 9px; border: 1.5px solid; background: #fff; transition: .12s;
+    -webkit-tap-highlight-color: transparent;
   }
-  .sector-chip:hover { filter: brightness(.97); }
 
   /* pool */
   .pool-card { flex: 1 1 auto; display: flex; flex-direction: column; min-height: 0; }
-  .pool-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 10px; }
+  .pool-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 8px; }
   .pool-head h2 { margin: 0; }
-  .hint { font-size: 11px; color: var(--muted); font-weight: 500; }
-  .filter-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .hint { font-size: 10.5px; color: var(--muted); font-weight: 500; }
+  .filter-tabs { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
   .ftab {
-    font-family: inherit; font-size: 11.5px; font-weight: 600; cursor: pointer;
-    padding: 5px 9px; border-radius: 20px; border: 1px solid var(--line); background: #fff; color: var(--muted);
-    display: inline-flex; align-items: center; gap: 5px; transition: .12s;
+    font-family: inherit; font-size: 11px; font-weight: 600; cursor: pointer;
+    padding: 4px 8px; border-radius: 20px; border: 1px solid var(--line); background: #fff; color: var(--muted);
+    display: inline-flex; align-items: center; gap: 4px; transition: .12s;
+    -webkit-tap-highlight-color: transparent;
   }
-  .ftab i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+  .ftab i { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
   .ftab.on { background: var(--ink); color: #fff; border-color: var(--ink); }
-  .ftab:not(.on):hover { background: #f4f6f8; }
 
-  .pool { flex: 1 1 auto; overflow-y: auto; border: 1.5px dashed transparent; border-radius: 10px; margin: -4px; padding: 4px; }
+  .pool { flex: 1 1 auto; overflow-y: auto; border: 1.5px dashed transparent; border-radius: 10px; padding: 2px; }
   .pool.dragover { border-color: var(--line); background: rgba(0,0,0,.02); }
-  .pool-sub { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin: 6px 2px 8px; }
-  .pool-sub.muted { opacity: .65; margin-top: 14px; }
-  .pool-grid { display: flex; flex-direction: column; gap: 7px; }
-  .empty-note { font-size: 12.5px; color: var(--muted); margin: 4px 2px; }
+  .pool-sub { font-size: 10.5px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin: 5px 2px 7px; }
+  .pool-sub.muted { opacity: .65; margin-top: 12px; }
+  .pool-grid { display: flex; flex-direction: column; gap: 6px; }
+  .empty-note { font-size: 12px; color: var(--muted); margin: 4px 2px; }
 
   .pcard {
-    display: flex; align-items: center; gap: 10px; padding: 7px 9px; border-radius: 10px;
+    display: flex; align-items: center; gap: 9px; padding: 7px 9px; border-radius: 10px;
     background: #fff; border: 1px solid var(--line); cursor: grab; transition: .12s; user-select: none;
+    -webkit-tap-highlight-color: transparent; touch-action: none;
   }
-  .pcard:hover { box-shadow: var(--shadow); border-color: #d3d8de; }
   .pcard:active { cursor: grabbing; }
-  .pcard.seated { opacity: .55; cursor: default; background: #f6f7f9; }
+  .pcard.seated { opacity: .55; cursor: default; background: #f6f7f9; touch-action: auto; }
   .pcard-av {
-    width: 34px; height: 34px; border-radius: 50%; flex: 0 0 auto; color: #fff;
-    display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12.5px;
+    width: 32px; height: 32px; border-radius: 50%; flex: 0 0 auto; color: #fff;
+    display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px;
   }
-  .pcard-name { font-size: 13.5px; font-weight: 600; flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .pcard-name { font-size: 13px; font-weight: 600; flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .pcard-del {
-    border: none; background: none; color: #b8c0c8; font-size: 18px; cursor: pointer; line-height: 1; padding: 0 2px;
+    border: none; background: none; color: #b8c0c8; font-size: 18px; cursor: pointer; line-height: 1;
+    padding: 4px 4px; min-width: 28px; min-height: 28px; display: flex; align-items: center; justify-content: center;
   }
   .pcard-del:hover { color: #e23b3b; }
   .pcard-seat { color: #9aa3ad; font-size: 10px; }
@@ -144,7 +147,6 @@
   }
   .window { position: absolute; background: linear-gradient(180deg,#bcd6e6,#9cbcd0); }
   .window-top { border-radius: 0 0 3px 3px; box-shadow: inset 0 -2px 4px rgba(0,0,0,.1); }
-  .window-right { border-radius: 3px 0 0 3px; box-shadow: inset -2px 0 4px rgba(0,0,0,.1); }
 
   .pillar {
     position: absolute; width: 44px; height: 44px; border-radius: 7px;
@@ -155,34 +157,28 @@
   .zone { position: absolute; border-radius: 10px; display: flex; align-items: flex-end; padding: 10px; }
   .zone-label { font-size: 13px; font-weight: 700; color: #5a636d; }
 
-  /* corridor */
   .zone-corridor { align-items: center; justify-content: flex-start; padding-left: 26px;
     background: rgba(255,255,255,.16);
     border-top: 2px dashed rgba(255,255,255,.55); border-bottom: 2px dashed rgba(255,255,255,.55); border-radius: 0; }
   .zone-corridor .zone-label { color: #4b545e; letter-spacing: .3em; text-transform: uppercase; font-size: 11px;
     background: rgba(236,239,242,.85); padding: 3px 10px; border-radius: 20px; }
 
-  /* manager office */
   .zone-office { background: rgba(242,177,0,.12); border: 2px solid var(--yellow); border-radius: 14px; }
   .zone-office .zone-label { color: #8a6a00; }
 
-  /* glass room */
   .zone-glassroom { background: rgba(170,202,222,.18); border: 2px solid rgba(110,162,196,.9);
     border-radius: 12px; align-items: flex-start;
     box-shadow: inset 0 1px 0 rgba(255,255,255,.5); }
   .zone-glassroom .zone-label { color: #3a5d77; font-weight: 800; font-size: 12px;
     text-transform: uppercase; letter-spacing: .05em; }
 
-  /* meeting booths inside glass room */
   .zone-booth { background: rgba(150,190,214,.55); border: 1.5px solid rgba(96,150,186,.95);
     border-radius: 6px; align-items: center; justify-content: center; padding: 0; }
   .zone-booth .zone-label { color: #2f536e; font-size: 11.5px; font-weight: 700; }
 
-  /* copa */
   .zone-room { background: #e6e2d6; border: 1px solid #d2cdbd; }
   .zone-room .zone-label { color: #7a715a; }
 
-  /* entrance */
   .zone-door { background: repeating-linear-gradient(45deg,#dfe3e7,#dfe3e7 8px,#d6dadf 8px,#d6dadf 16px);
     border: 1px dashed #b8c0c8; align-items: center; }
   .zone-door .zone-label { color: #6b7480; }
@@ -191,8 +187,7 @@
   /* desk island */
   .island { position: absolute; }
   .desk-surface {
-    position: absolute;
-    background: var(--white-desk); border-radius: 8px;
+    position: absolute; background: var(--white-desk); border-radius: 8px;
     box-shadow: 0 3px 8px rgba(20,28,40,.16), inset 0 0 0 1px rgba(0,0,0,.04);
   }
   .desk-spine { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #edeff2; transform: translateX(-50%); }
@@ -210,6 +205,7 @@
     position: relative; width: 46px; height: 46px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     font-weight: 700; color: #fff; transition: .12s; user-select: none;
+    -webkit-tap-highlight-color: transparent;
   }
   .seat.empty {
     background: rgba(255,255,255,.62); color: #97a0aa; border: 2px dashed #aab2bb;
@@ -217,15 +213,16 @@
   }
   .seat.empty:hover { background: #fff; border-color: var(--yellow); color: var(--yellow); transform: scale(1.06); }
   .seat.empty.over { background: #fff; border-color: var(--yellow); border-style: solid; color: var(--yellow); transform: scale(1.1); }
-  .seat.filled { cursor: grab; font-size: 15px; box-shadow: 0 2px 6px rgba(0,0,0,.2); }
+  .seat.filled { cursor: grab; font-size: 15px; box-shadow: 0 2px 6px rgba(0,0,0,.2); touch-action: none; }
   .seat.filled:active { cursor: grabbing; }
   .seat.sm { width: 44px; height: 44px; }
   .seat.sm.empty { font-size: 20px; border-width: 2px; }
   .seat.sm.filled { font-size: 14px; }
   .seat-remove {
-    position: absolute; top: -5px; right: -5px; width: 18px; height: 18px; border-radius: 50%;
-    border: 2px solid #fff; background: #2b3138; color: #fff; font-size: 12px; line-height: 1; cursor: pointer;
+    position: absolute; top: -5px; right: -5px; width: 20px; height: 20px; border-radius: 50%;
+    border: 2px solid #fff; background: #2b3138; color: #fff; font-size: 13px; line-height: 1; cursor: pointer;
     display: none; align-items: center; justify-content: center; padding: 0;
+    -webkit-tap-highlight-color: transparent;
   }
   .seat.filled:hover .seat-remove { display: flex; }
   .seat-remove:hover { background: #e23b3b; }
@@ -235,28 +232,26 @@
     background: rgba(255,255,255,.8); padding: 0 4px; border-radius: 4px;
   }
 
-  .avatar { border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; }
-
   .floor-legend {
-    position: absolute; right: 18px; top: 26px; display: flex; gap: 14px;
-    background: rgba(255,255,255,.92); border: 1px solid var(--line); border-radius: 10px; padding: 8px 14px;
+    position: absolute; right: 18px; top: 18px; display: flex; gap: 12px;
+    background: rgba(255,255,255,.92); border: 1px solid var(--line); border-radius: 10px; padding: 7px 12px;
     box-shadow: var(--shadow);
   }
-  .floor-legend .lg { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #3a424c; }
-  .floor-legend .lg i { width: 11px; height: 11px; border-radius: 3px; display: inline-block; }
+  .floor-legend .lg { display: flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; color: #3a424c; }
+  .floor-legend .lg i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
 
   /* modal picker */
   .modal-bg { position: fixed; inset: 0; background: rgba(20,28,40,.42);
-    display: flex; align-items: center; justify-content: center; z-index: 50; }
-  .modal { background: #fff; border-radius: 16px; width: 360px; max-width: 92vw; max-height: 80vh;
-    padding: 18px; display: flex; flex-direction: column; box-shadow: 0 24px 60px rgba(0,0,0,.3); }
+    display: flex; align-items: flex-end; justify-content: center; z-index: 50; }
+  .modal { background: #fff; border-radius: 20px 20px 0 0; width: 100%; max-width: 480px; max-height: 85vh;
+    padding: 18px 18px 32px; display: flex; flex-direction: column; box-shadow: 0 -8px 40px rgba(0,0,0,.2); }
+  .modal-handle { width: 40px; height: 4px; background: var(--line); border-radius: 2px; margin: 0 auto 16px; }
   .modal-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
   .modal-head h3 { margin: 0; font-size: 16px; font-weight: 800; }
   .modal-head p { margin: 2px 0 0; font-size: 12.5px; color: var(--muted); font-weight: 500; }
-  .modal .x { border: none; background: #f1f3f5; width: 28px; height: 28px; border-radius: 8px;
-    font-size: 18px; cursor: pointer; color: var(--muted); }
-  .modal .x:hover { background: #e7eaed; }
-  .picker-list { overflow-y: auto; margin-top: 12px; }
+  .modal .x { border: none; background: #f1f3f5; width: 30px; height: 30px; border-radius: 8px;
+    font-size: 18px; cursor: pointer; color: var(--muted); display: flex; align-items: center; justify-content: center; }
+  .picker-list { overflow-y: auto; margin-top: 12px; flex: 1; }
   .pick-group { margin-bottom: 12px; }
   .pick-group-h { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em;
     display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
@@ -264,11 +259,46 @@
   .pick-row {
     display: flex; align-items: center; gap: 10px; width: 100%; text-align: left;
     font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
-    padding: 7px 8px; border-radius: 9px; border: 1px solid transparent; background: none;
+    padding: 10px 8px; border-radius: 9px; border: 1px solid transparent; background: none;
+    -webkit-tap-highlight-color: transparent;
   }
-  .pick-row:hover { background: #f4f6f8; }
-  .pick-av { width: 30px; height: 30px; border-radius: 50%; color: #fff;
+  .pick-row:hover, .pick-row:active { background: #f4f6f8; }
+  .pick-av { width: 32px; height: 32px; border-radius: 50%; color: #fff;
     display: flex; align-items: center; justify-content: center; font-size: 11.5px; font-weight: 700; }
+
+  /* ---- mobile ---- */
+  @media (max-width: 767px) {
+    .topbar { padding: 10px 14px; gap: 8px; }
+    .brand p { display: none; }
+    .brand h1 { font-size: 15px; }
+    .stats { gap: 5px; margin-left: 0; order: 3; width: 100%; justify-content: space-between; }
+    .stat { padding: 4px 6px; min-width: 0; flex: 1; }
+    .stat b { font-size: 15px; }
+    .stat span { font-size: 8.5px; }
+    .top-actions { margin-left: auto; }
+    .btn { padding: 7px 10px; font-size: 12px; }
+
+    .body { flex-direction: column; }
+    .sidebar {
+      width: 100%; flex: 0 0 auto; order: 2;
+      border-right: none; border-top: 1px solid var(--line);
+      max-height: 46vh; padding: 10px;
+    }
+    .stage { order: 1; min-height: 0; }
+    .pool-card { min-height: 80px; }
+
+    .floor-legend {
+      top: auto; bottom: 8px; right: 8px;
+      gap: 7px; padding: 5px 9px; flex-wrap: wrap; max-width: 200px;
+    }
+    .floor-legend .lg { font-size: 10px; gap: 3px; }
+    .floor-legend .lg i { width: 8px; height: 8px; }
+  }
+
+  /* always show remove button on touch (hover doesn't fire on touch screens) */
+  @media (hover: none) {
+    .seat-remove { display: flex !important; }
+  }
 </style>
 </head>
 <body>
@@ -290,14 +320,13 @@
     };
 
     window.DESKS = (function () {
-      const list = [];
-      const start = 22, step = 150, y = 40;
-      for (let i = 0; i < 10; i++) {
-        const id = 'M' + String(i + 1).padStart(2, '0');
-        list.push({ id, label: 'Mesa ' + String(i + 1).padStart(2, '0'), x: start + i * step, y });
+      var list = [];
+      var start = 22, step = 150, y = 40;
+      for (var i = 0; i < 10; i++) {
+        var id = 'M' + String(i + 1).padStart(2, '0');
+        list.push({ id: id, label: 'Mesa ' + String(i + 1).padStart(2, '0'), x: start + i * step, y: y });
       }
-      // 4 work desks inside the glass room (alocáveis), spread to fill the space
-      const gx = 240, gy = 404, gstep = 227;
+      var gx = 240, gy = 404, gstep = 227;
       ['A', 'B', 'C', 'D'].forEach(function(L, i) {
         list.push({ id: 'SV' + L, label: String(11 + i), x: gx + i * gstep, y: gy, small: true });
       });
@@ -320,9 +349,7 @@
       { id: 'entrada', label: 'Entrada', kind: 'door', x: 1368, y: 374, w: 130, h: 244 },
     ];
 
-    window.WINDOWS = [
-      { side: 'top', x: 18, y: 0, w: 1484, h: 12 },
-    ];
+    window.WINDOWS = [{ side: 'top', x: 18, y: 0, w: 1484, h: 12 }];
 
     window.seatLayout = function(desk) {
       if (desk.small) {
@@ -346,16 +373,14 @@
     };
   </script>
 
-  <!-- ===== Components + App (JSX via Babel) ===== -->
+  <!-- ===== App ===== -->
   <script type="text/babel">
-    /* global React, ReactDOM */
     const { useState, useEffect, useRef, useMemo } = React;
 
     const STORE = 'seatmap_v1';
     const SECTOR_KEYS = ['comercial', 'marketing', 'juridico', 'tecnico'];
     const TOTAL_SEATS = window.DESKS.length * 6;
 
-    /* ---- helpers ---- */
     function initials(name) {
       const parts = (name || '').trim().split(/\s+/).filter(Boolean);
       if (!parts.length) return '?';
@@ -364,35 +389,41 @@
     }
 
     function load() {
-      try { return JSON.parse(localStorage.getItem(STORE)) || {}; } catch (e) { return {}; }
+      try { return JSON.parse(localStorage.getItem(STORE)) || {}; } catch { return {}; }
     }
 
     let _uid = Date.now();
     const uid = () => 'p' + (_uid++).toString(36);
 
     /* ---- Seat ---- */
-    function Seat({ seat, person, deskId, sm, onDropPerson, onDragStartSeat, onClickEmpty, onRemove }) {
+    function Seat({ seat, person, deskId, sm, onDropPerson, onDragStartSeat, onClickEmpty, onRemove, onPointerDragStart }) {
       const [over, setOver] = useState(false);
       const sector = person ? window.SECTORS[person.sector] : null;
       const seatId = deskId + '-' + seat.n;
+
       return (
-        <div className="seat-wrap" style={{ left: seat.cx, top: seat.cy }}>
+        <div className="seat-wrap" style={{ left: seat.cx, top: seat.cy }} data-seat-id={seatId}>
           <div
             className={'seat' + (sm ? ' sm' : '') + (person ? ' filled' : ' empty') + (over ? ' over' : '')}
             draggable={!!person}
+            onPointerDown={(e) => {
+              if (person && e.pointerType !== 'mouse') onPointerDragStart(e, person.id, seatId);
+            }}
             onDragStart={(e) => { if (person) onDragStartSeat(e, seatId, person.id); }}
             onDragOver={(e) => { e.preventDefault(); if (!over) setOver(true); }}
             onDragLeave={() => setOver(false)}
             onDrop={(e) => { e.preventDefault(); setOver(false); onDropPerson(e, seatId); }}
-            onClick={() => { if (!person) onClickEmpty(seatId, seat); }}
+            onClick={(e) => { if (!person && e.pointerType !== 'touch') onClickEmpty(seatId, seat); }}
+            onPointerUp={(e) => { if (!person && e.pointerType === 'touch') onClickEmpty(seatId, seat); }}
             style={person ? {
               background: sector.color,
               boxShadow: over ? `0 0 0 3px #fff, 0 0 0 6px ${sector.color}` : 'none'
             } : {}}
-            title={person ? person.name + ' · ' + sector.label : 'Cadeira ' + seat.n + ' — clique para alocar'}>
+            title={person ? person.name + ' · ' + sector.label : 'Cadeira ' + seat.n}>
             {person ? initials(person.name) : over ? '↓' : '+'}
             {person && (
               <button className="seat-remove"
+                onPointerDown={(e) => e.stopPropagation()}
                 onClick={(e) => { e.stopPropagation(); onRemove(seatId); }}
                 title="Remover">×</button>
             )}
@@ -441,12 +472,13 @@
     }
 
     /* ---- PersonCard ---- */
-    function PersonCard({ person, onDragStart, onDelete, seated }) {
+    function PersonCard({ person, onDragStart, onDelete, seated, onPointerDragStart }) {
       const s = window.SECTORS[person.sector];
       return (
         <div
           className={'pcard' + (seated ? ' seated' : '')}
           draggable={!seated}
+          onPointerDown={(e) => { if (!seated && e.pointerType !== 'mouse') onPointerDragStart(e, person.id, null); }}
           onDragStart={(e) => !seated && onDragStart(e, person.id)}
           title={seated ? person.name + ' (já alocado)' : 'Arraste para uma cadeira'}>
           <div className="pcard-av" style={{ background: s.color }}>{initials(person.name)}</div>
@@ -454,6 +486,7 @@
           {seated
             ? <span className="pcard-seat">●</span>
             : <button className="pcard-del"
+                onPointerDown={(e) => e.stopPropagation()}
                 onClick={(e) => { e.stopPropagation(); onDelete(person.id); }}
                 title="Excluir">×</button>
           }
@@ -461,7 +494,7 @@
       );
     }
 
-    /* ---- Picker modal ---- */
+    /* ---- Picker (bottom sheet) ---- */
     function Picker({ picker, people, seatedIds, onClose, onPick }) {
       const [q, setQ] = useState('');
       const avail = people.filter(p =>
@@ -470,6 +503,7 @@
       return (
         <div className="modal-bg" onClick={onClose}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-handle" />
             <div className="modal-head">
               <div>
                 <h3>Alocar lugar</h3>
@@ -521,21 +555,24 @@
       const [scale, setScale] = useState(1);
       const [poolOver, setPoolOver] = useState(false);
       const stageRef = useRef(null);
+      const dragRef = useRef({ active: false, ghost: null, personId: null, fromSeatId: null });
+      const fnRef = useRef({});
 
       useEffect(() => {
         localStorage.setItem(STORE, JSON.stringify({ people, assignments }));
       }, [people, assignments]);
 
+      // fit floor to stage
       useEffect(() => {
         function fit() {
           const el = stageRef.current;
           if (!el) return;
-          const pad = 32;
+          const pad = 24;
           const s = Math.min(
             (el.clientWidth - pad) / window.FLOOR.w,
             (el.clientHeight - pad) / window.FLOOR.h
           );
-          setScale(Math.max(0.2, Math.min(s, 1.1)));
+          setScale(Math.max(0.15, Math.min(s, 1.1)));
         }
         fit();
         window.addEventListener('resize', fit);
@@ -569,7 +606,7 @@
       function assign(personId, seatId, fromSeatId) {
         setAssignments(a => {
           const n = { ...a };
-          const prev = fromSeatId || seatOf(personId);
+          const prev = fromSeatId !== undefined ? fromSeatId : seatOf(personId);
           const occupant = n[seatId];
           if (prev) delete n[prev];
           n[seatId] = personId;
@@ -582,14 +619,73 @@
         setAssignments(a => { const n = { ...a }; delete n[seatId]; return n; });
       }
 
+      // keep fnRef current so touch-drag handlers always call latest version
+      fnRef.current.assign = assign;
+      fnRef.current.unassign = unassign;
+      fnRef.current.setPicker = setPicker;
+
+      // --- touch / pointer drag system ---
+      function startPointerDrag(e, personId, fromSeatId) {
+        e.preventDefault();
+        e.stopPropagation();
+        const el = e.currentTarget;
+        const rect = el.getBoundingClientRect();
+        const g = el.cloneNode(true);
+        const isCircle = el.classList.contains('seat');
+        Object.assign(g.style, {
+          position: 'fixed', pointerEvents: 'none', zIndex: '9999', opacity: '0.85',
+          width: rect.width + 'px', height: rect.height + 'px', margin: '0', transition: 'none',
+          left: (e.clientX - rect.width / 2) + 'px', top: (e.clientY - rect.height / 2) + 'px',
+          borderRadius: isCircle ? '50%' : '10px', transform: 'scale(1.08)',
+          boxShadow: '0 8px 24px rgba(0,0,0,.3)',
+        });
+        document.body.appendChild(g);
+        dragRef.current = { active: true, personId, fromSeatId: fromSeatId || null, ghost: g };
+      }
+
+      useEffect(() => {
+        function onMove(e) {
+          const d = dragRef.current;
+          if (!d.active || !d.ghost) return;
+          d.ghost.style.left = (e.clientX - d.ghost.offsetWidth / 2) + 'px';
+          d.ghost.style.top = (e.clientY - d.ghost.offsetHeight / 2) + 'px';
+        }
+        function onUp(e) {
+          const d = dragRef.current;
+          if (!d.active) return;
+          if (d.ghost) { d.ghost.remove(); d.ghost = null; }
+          dragRef.current = { active: false };
+
+          // hit-test: find seat or pool under finger
+          const els = document.elementsFromPoint(e.clientX, e.clientY);
+          for (const el of els) {
+            const sw = el.closest('[data-seat-id]');
+            if (sw) {
+              fnRef.current.assign(d.personId, sw.dataset.seatId, d.fromSeatId);
+              return;
+            }
+            if (el.closest('[data-pool]')) {
+              if (d.fromSeatId) fnRef.current.unassign(d.fromSeatId);
+              return;
+            }
+          }
+        }
+        document.addEventListener('pointermove', onMove, { passive: false });
+        document.addEventListener('pointerup', onUp);
+        return () => {
+          document.removeEventListener('pointermove', onMove);
+          document.removeEventListener('pointerup', onUp);
+        };
+      }, []);
+
+      // --- HTML5 drag (desktop/mouse) ---
       const handlers = {
         onDragStartSeat: (e, seatId, personId) => {
           e.dataTransfer.setData('text/plain', JSON.stringify({ t: 'seat', seatId, personId }));
           e.dataTransfer.effectAllowed = 'move';
         },
         onDropPerson: (e, seatId) => {
-          let d;
-          try { d = JSON.parse(e.dataTransfer.getData('text/plain')); } catch (_) { return; }
+          let d; try { d = JSON.parse(e.dataTransfer.getData('text/plain')); } catch { return; }
           if (!d) return;
           assign(d.personId, seatId, d.t === 'seat' ? d.seatId : null);
         },
@@ -598,18 +694,16 @@
           setPicker({ seatId, deskLabel: desk ? desk.label : '', seatN: seat.n });
         },
         onRemove: (seatId) => unassign(seatId),
+        onPointerDragStart: startPointerDrag,
       };
 
       function poolDragStart(e, personId) {
         e.dataTransfer.setData('text/plain', JSON.stringify({ t: 'pool', personId }));
         e.dataTransfer.effectAllowed = 'move';
       }
-
       function poolDrop(e) {
-        e.preventDefault();
-        setPoolOver(false);
-        let d;
-        try { d = JSON.parse(e.dataTransfer.getData('text/plain')); } catch (_) { return; }
+        e.preventDefault(); setPoolOver(false);
+        let d; try { d = JSON.parse(e.dataTransfer.getData('text/plain')); } catch { return; }
         if (d && d.t === 'seat') unassign(d.seatId);
       }
 
@@ -629,14 +723,12 @@
         Object.entries(names).forEach(([sec, list]) =>
           list.forEach(nm => ps.push({ id: uid(), name: nm, sector: sec }))
         );
-        setPeople(ps);
-        setAssignments({});
+        setPeople(ps); setAssignments({});
       }
 
       function clearAll() {
         if (!confirm('Limpar todos os cadastros e alocações?')) return;
-        setPeople([]);
-        setAssignments({});
+        setPeople([]); setAssignments({});
       }
 
       return (
@@ -649,15 +741,15 @@
                 <p>Andar Operacional · alocação por setor</p>
               </div>
             </div>
-            <div className="stats">
-              <div className="stat"><b>{window.DESKS.length}</b><span>mesas</span></div>
-              <div className="stat"><b>{allocated}</b><span>alocados</span></div>
-              <div className="stat"><b>{TOTAL_SEATS - allocated}</b><span>lugares livres</span></div>
-              <div className="stat"><b>{people.length}</b><span>cadastrados</span></div>
-            </div>
             <div className="top-actions">
               <button className="btn ghost" onClick={loadSample}>Exemplo</button>
               <button className="btn ghost" onClick={clearAll}>Limpar</button>
+            </div>
+            <div className="stats">
+              <div className="stat"><b>{window.DESKS.length}</b><span>mesas</span></div>
+              <div className="stat"><b>{allocated}</b><span>alocados</span></div>
+              <div className="stat"><b>{TOTAL_SEATS - allocated}</b><span>livres</span></div>
+              <div className="stat"><b>{people.length}</b><span>cadastrados</span></div>
             </div>
           </header>
 
@@ -666,12 +758,8 @@
               <section className="card">
                 <h2>Cadastrar pessoa</h2>
                 <form onSubmit={addPerson} className="reg-form">
-                  <input
-                    className="input"
-                    placeholder="Nome da pessoa"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                  />
+                  <input className="input" placeholder="Nome da pessoa"
+                    value={name} onChange={(e) => setName(e.target.value)} />
                   <div className="sector-pick">
                     {SECTOR_KEYS.map(k => (
                       <button type="button" key={k}
@@ -693,7 +781,7 @@
               <section className="card pool-card">
                 <div className="pool-head">
                   <h2>Pessoas</h2>
-                  <span className="hint">arraste para uma cadeira →</span>
+                  <span className="hint">toque + para alocar</span>
                 </div>
                 <div className="filter-tabs">
                   <button className={'ftab' + (filter === 'todos' ? ' on' : '')}
@@ -706,28 +794,26 @@
                     </button>
                   ))}
                 </div>
-
                 <div
                   className={'pool' + (poolOver ? ' dragover' : '')}
+                  data-pool="true"
                   onDragOver={(e) => { e.preventDefault(); setPoolOver(true); }}
                   onDragLeave={() => setPoolOver(false)}
                   onDrop={poolDrop}>
                   <div className="pool-sub">Disponíveis ({available.length})</div>
-                  {available.length === 0 && (
-                    <p className="empty-note">Ninguém disponível neste filtro.</p>
-                  )}
+                  {available.length === 0 && <p className="empty-note">Ninguém disponível neste filtro.</p>}
                   <div className="pool-grid">
                     {available.map(p => (
                       <PersonCard key={p.id} person={p}
-                        onDragStart={poolDragStart} onDelete={deletePerson} />
+                        onDragStart={poolDragStart} onDelete={deletePerson}
+                        onPointerDragStart={startPointerDrag} />
                     ))}
                   </div>
-                  {seatedList.length > 0 && (
-                    <div className="pool-sub muted">Já alocados ({seatedList.length})</div>
-                  )}
+                  {seatedList.length > 0 && <div className="pool-sub muted">Já alocados ({seatedList.length})</div>}
                   <div className="pool-grid">
                     {seatedList.map(p => (
-                      <PersonCard key={p.id} person={p} seated onDelete={deletePerson} />
+                      <PersonCard key={p.id} person={p} seated onDelete={deletePerson}
+                        onPointerDragStart={startPointerDrag} />
                     ))}
                   </div>
                 </div>
@@ -766,9 +852,7 @@
 
           {picker && (
             <Picker
-              picker={picker}
-              people={people}
-              seatedIds={seatedIds}
+              picker={picker} people={people} seatedIds={seatedIds}
               onClose={() => setPicker(null)}
               onPick={(pid) => { assign(pid, picker.seatId); setPicker(null); }}
             />
